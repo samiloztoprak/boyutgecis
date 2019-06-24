@@ -4321,6 +4321,10 @@ PrefabInstance:
       propertyPath: chargeMaterial
       value: 
       objectReference: {fileID: 2100000, guid: d42eb7c92212d154a930361fea6505a8, type: 2}
+    - target: {fileID: 260414630, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: light
+      value: 
+      objectReference: {fileID: 2107548156}
     - target: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Height
       value: 1.7
@@ -5335,7 +5339,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -16287,7 +16291,7 @@ PrefabInstance:
     - target: {fileID: 2181362183161397089, guid: 414d84a92f147164d8f2693e59316892,
         type: 3}
       propertyPath: m_InnerSpotAngle
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2181362182551507150, guid: 414d84a92f147164d8f2693e59316892, type: 3}
@@ -18711,6 +18715,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -762731150684487525, guid: 9ba5a799290729040a223947b6653edf, type: 3}
+--- !u!108 &2107548156 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 2181362183161397089, guid: 414d84a92f147164d8f2693e59316892,
+    type: 3}
+  m_PrefabInstance: {fileID: 1618270345}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2115291149 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7554984856362957682, guid: 1512dcad133140249a530b994bb99d46,

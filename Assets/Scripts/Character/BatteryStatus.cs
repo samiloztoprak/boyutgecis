@@ -5,7 +5,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class BatteryStatus : MonoBehaviour
 {
     [SerializeField]
-    private float batteryStatus = 25;
+    private float batteryStatus = 20;
 
     [SerializeField]
     private float reductionPerSeconds = 0.01f; // bataryanın 1 saniyede azalma miktarı
@@ -22,8 +22,15 @@ public class BatteryStatus : MonoBehaviour
     [SerializeField]
     private bool flashLightIsOn = true; // fener ışığının açık olup olmadığını belirten değişken.
 
+    [SerializeField]
+    private int batteryWarningRate = 20;
+
+    [SerializeField]
+    private Light light;
+
     private bool isReducing = false; // pil azalması aktif deaktif 
 
+    private int rnd;
 
     private void Update()
     {
@@ -43,7 +50,35 @@ public class BatteryStatus : MonoBehaviour
         batteryStatus -= reductionPerSeconds;
         yield return new WaitForSeconds(1f);
 
+        if (batteryStatus < batteryWarningRate)
+        {
+            rnd = Random.Range(0, 100);
+
+            if (rnd > 50)
+            {
+                StartCoroutine(Warning());
+            }
+        }
         isReducing = false;
+    }
+
+    private IEnumerator Warning()
+    {
+        light.enabled = false;
+        yield return new WaitForSeconds(Random.Range(5, 20) / 10);
+        light.enabled = true;
+        yield return new WaitForSeconds(Random.Range(5, 10) / 10);
+        light.enabled = false;
+        yield return new WaitForSeconds(Random.Range(5, 10) / 10);
+        light.enabled = true;
+        yield return new WaitForSeconds(Random.Range(5, 10) / 10);
+        light.enabled = false;
+        yield return new WaitForSeconds(Random.Range(5, 10) / 10);
+        light.enabled = true;
+        yield return new WaitForSeconds(Random.Range(5, 10) / 10);
+        light.enabled = false;
+        yield return new WaitForSeconds(Random.Range(5, 10) / 10);
+        light.enabled = true;
     }
 
     public void AddBattery(float value) // Batarya miktarı ekle
