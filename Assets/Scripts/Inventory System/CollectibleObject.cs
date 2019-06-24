@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectibleObject : MonoBehaviour
+public abstract class CollectibleObject : MonoBehaviour
 {
     [SerializeField]
     private string name;

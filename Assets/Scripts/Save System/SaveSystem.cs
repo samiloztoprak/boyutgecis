@@ -13,7 +13,6 @@ public static class SaveSystem
         Debug.Log(Application.persistentDataPath);
         bf.Serialize(file, data);
         file.Close();
-
         Debug.Log("Game saved.");
     }
 
@@ -24,7 +23,6 @@ public static class SaveSystem
         Debug.Log(Application.persistentDataPath);
         bf.Serialize(file, data);
         file.Close();
-
         Debug.Log("Game saved.");
     }
 
@@ -32,6 +30,15 @@ public static class SaveSystem
     {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/newspaperdata.save");
+        Debug.Log(Application.persistentDataPath);
+        bf.Serialize(file, data);
+        file.Close();
+        Debug.Log("Game saved.");
+    }
+    public static void SaveCrateData(CrateData data)
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/cratedata.save");
         Debug.Log(Application.persistentDataPath);
         bf.Serialize(file, data);
         file.Close();
@@ -46,9 +53,7 @@ public static class SaveSystem
             FileStream file = File.Open(Application.persistentDataPath + "/keydata.save", FileMode.Open);
             KeyData data = bf.Deserialize(file) as KeyData;
             file.Close();
-
             Debug.Log("Game Loaded");
-
             return data;
         }
         else
@@ -66,9 +71,7 @@ public static class SaveSystem
             FileStream file = File.Open(Application.persistentDataPath + "/playerdata.save", FileMode.Open);
             PlayerData data = bf.Deserialize(file) as PlayerData;
             file.Close();
-
             Debug.Log("Game Loaded");
-
             return data;
 
         }
@@ -88,9 +91,25 @@ public static class SaveSystem
             NewspaperData data = bf.Deserialize(file) as NewspaperData;
             file.Close();
             Debug.Log("Game Loaded");
-
             return data;
+        }
+        else
+        {
+            Debug.Log("No game saved!");
+            return null;
+        }
+    }
 
+    public static CrateData LoadCrateData()
+    {
+        if (File.Exists(Application.persistentDataPath + "/cratedata.save")) // daha önce kaydedilmiş mi
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/cratedata.save", FileMode.Open);
+            CrateData data = bf.Deserialize(file) as CrateData;
+            file.Close();
+            Debug.Log("Game Loaded");
+            return data;
         }
         else
         {
