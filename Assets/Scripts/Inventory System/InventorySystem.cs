@@ -13,7 +13,7 @@ public class InventorySystem : MonoBehaviour
     private void Update()
     {
         //Basic key change inputs
-        if (Input.GetKeyDown(KeyCode.Alpha1))   
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             ChangeKey(0);
         }
@@ -21,7 +21,7 @@ public class InventorySystem : MonoBehaviour
         {
             ChangeKey(1);
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             ChangeKey(2);
         }
@@ -30,7 +30,6 @@ public class InventorySystem : MonoBehaviour
         {
             ChangeKey(3);
         }
-        
     }
 
     private void ChangeKey(int index) // pil değiştirme
@@ -53,7 +52,6 @@ public class InventorySystem : MonoBehaviour
     {
         newspapers.Add(newspaper);
     }
-
     public void ListNewspapers() // Gazeteleri listeleme
     {
         foreach (var newspaper in newspapers)
@@ -72,12 +70,11 @@ public class InventorySystem : MonoBehaviour
 
     public void ListMyObjects() // Envanterdeki Objeleri Listele.
     {
-        foreach (var key in myObjects)
+        foreach (var obj in myObjects)
         {
-            Debug.Log(key);
+            Debug.Log(obj.name);
         }
     }
-
     public int GetCurrentKey() // Kullanılan anahtarın numarasını getir.
     {
         return keys[currentKey].GetKeyNo();
@@ -89,7 +86,7 @@ public class InventorySystem : MonoBehaviour
     {
         return keys;
     }
-    
+
     public List<CollectibleObject> GetMyObjects()
     {
         return myObjects;
@@ -104,12 +101,12 @@ public class InventorySystem : MonoBehaviour
     {
         keys = keyList;
     }
-    
+
     public void SetMyObjectList(List<CollectibleObject> objectList)
     {
         myObjects = objectList;
     }
-    
+
     public void SetNewspaperList(List<Newspaper> newspaperList)
     {
         newspapers = newspaperList;

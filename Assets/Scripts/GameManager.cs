@@ -40,6 +40,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Newspaper[] newspapers;
 
+    [SerializeField]
+    private Crate[] crates;
+
     //--------------------------------------------------------------------------------------
 
     [SerializeField]
@@ -141,6 +144,8 @@ public class GameManager : MonoBehaviour
 
         NewspaperData newspaperData = SaveSystem.LoadNewspaperData();
 
+        CrateData crateData = SaveSystem.LoadCrateData();
+
         for (i = 0; i < keyData.keyNo.Length; i++)
         {
             keys[i].SetInInventory(keyData.inInventory[i]);
@@ -161,6 +166,11 @@ public class GameManager : MonoBehaviour
                 inventory.AddNewspaper(newspaper); // envantere tekrar ekliyoruz.
                 newspapers[i].gameObject.SetActive(false); // sahneden gizliyoruz.
             }
+        }
+
+        for (int i = 0; i < crateData.keyNo.Length; i++)
+        {
+            crates[i].SetIsOpen(crateData.isOpen[i]); // sandığın açık veya kapalı olma durumunun yüklenmesi.
         }
 
         //Batarya son durumunun yüklenmesi.
