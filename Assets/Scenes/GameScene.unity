@@ -10857,7 +10857,7 @@ PrefabInstance:
     - target: {fileID: 2181362183161397089, guid: 414d84a92f147164d8f2693e59316892,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 35
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2181362183161397089, guid: 414d84a92f147164d8f2693e59316892,
         type: 3}
@@ -10872,7 +10872,7 @@ PrefabInstance:
     - target: {fileID: 2181362183161397089, guid: 414d84a92f147164d8f2693e59316892,
         type: 3}
       propertyPath: m_Range
-      value: 40
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2181362183161397089, guid: 414d84a92f147164d8f2693e59316892,
         type: 3}
