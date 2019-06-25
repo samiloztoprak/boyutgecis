@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.1
   m_LinearFogStart: 0
   m_LinearFogEnd: 12
-  m_AmbientSkyColor: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
+  m_AmbientSkyColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0.7
@@ -160,8 +160,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7830094, y: 2.6873775, z: 2.933616}
-  m_Center: {x: -0.27903596, y: -0.17475902, z: -1.4503034}
+  m_Size: {x: 1.7830094, y: 2.9619176, z: 3.5140698}
+  m_Center: {x: -0.27903613, y: -0.03748934, z: -1.7405301}
 --- !u!64 &37306270
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1749,8 +1749,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.025740722, y: 0.016463898, z: 0.01910294}
-  m_Center: {x: 0.0024494058, y: 0.006165228, z: -0.008296853}
+  m_Size: {x: 0.031953253, y: 0.018989008, z: 0.01910294}
+  m_Center: {x: 0.004156223, y: 0.007427773, z: -0.008296854}
 --- !u!64 &809326236
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2773,8 +2773,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2492131, y: 1.52993, z: 0.422527}
-  m_Center: {x: 0.19460468, y: 0.14199431, z: 0.00406691}
+  m_Size: {x: 2.0935922, y: 1.7838962, z: 0.422527}
+  m_Center: {x: 0.08904192, y: 0.13258012, z: 0.00406691}
 --- !u!64 &1433278610
 MeshCollider:
   m_ObjectHideFlags: 0
