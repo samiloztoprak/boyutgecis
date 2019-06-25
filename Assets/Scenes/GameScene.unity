@@ -160,8 +160,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7830094, y: 2.6873775, z: 2.2878156}
-  m_Center: {x: -0.27903584, y: -0.17475902, z: -1.1274034}
+  m_Size: {x: 1.7830094, y: 2.6873775, z: 2.933616}
+  m_Center: {x: -0.27903596, y: -0.17475902, z: -1.4503034}
 --- !u!64 &37306270
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1749,8 +1749,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02087562, y: 0.013242267, z: 0.01910294}
-  m_Center: {x: 0.0009517787, y: 0.0066740196, z: -0.008296853}
+  m_Size: {x: 0.025740722, y: 0.016463898, z: 0.01910294}
+  m_Center: {x: 0.0024494058, y: 0.006165228, z: -0.008296853}
 --- !u!64 &809326236
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10857,12 +10857,12 @@ PrefabInstance:
     - target: {fileID: 2181362183161397089, guid: 414d84a92f147164d8f2693e59316892,
         type: 3}
       propertyPath: m_SpotAngle
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2181362183161397089, guid: 414d84a92f147164d8f2693e59316892,
         type: 3}
       propertyPath: m_Intensity
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2181362183161397089, guid: 414d84a92f147164d8f2693e59316892,
         type: 3}
@@ -10872,7 +10872,7 @@ PrefabInstance:
     - target: {fileID: 2181362183161397089, guid: 414d84a92f147164d8f2693e59316892,
         type: 3}
       propertyPath: m_Range
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2181362183161397089, guid: 414d84a92f147164d8f2693e59316892,
         type: 3}
