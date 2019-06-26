@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
         KeyData keyData = SaveSystem.LoadKeyData();
 
         PlayerData playerData = SaveSystem.LoadPlayerData();
-
+         
         NewspaperData newspaperData = SaveSystem.LoadNewspaperData();
 
         CrateData crateData = SaveSystem.LoadCrateData();
