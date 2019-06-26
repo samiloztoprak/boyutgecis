@@ -20,6 +20,8 @@ public class Door : MonoBehaviour
 
     private GameManager gameManager;
 
+    private UIController uiController;
+
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
@@ -27,31 +29,63 @@ public class Door : MonoBehaviour
             if (Input.GetKeyDown(GameManager.GetInteractionKeyCode()))
             {
                 OpenTheDoor();
+                uiController.HideOpenTheDoor();
             }
         }
     }
 
-    private void OpenTheDoor()
+    private void OnTriggerEnter(Collider other)
     {
-        if (gameManager.GetCurrentKeyNo() == keyNo)
+        if (isOn)
         {
-            if (!isOn)
-            {
-                isOn = true;
-                StartCoroutine(Open());
-                Debug.Log("Door is Open.");
-            }
-            else
-            {
-                StartCoroutine(Close());
-                isOn = false;
-                Debug.Log("Door is Close.");
-            }
+            uiController.HideOpenTheDoor();
+            uiController.ShowCloseTheDoor();
         }
         else
         {
-            Debug.Log("Wrong Key!");
+            uiController.ShowOpenTheDoor();
+            uiController.HideCloseTheDoor();
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        uiController.HideOpenTheDoor();
+
+        uiController.HideCloseTheDoor();
+
+        uiController.HideYouHaveNotCorrectKey();
+    }
+    private void OpenTheDoor()
+    {
+        try
+        {
+            if (gameManager.GetCurrentKeyNo() == keyNo)
+            {
+                if (!isOn)
+                {
+                    isOn = true;
+                    StartCoroutine(Open());
+                    Debug.Log("Door is Open.");
+                }
+                else
+                {
+                    StartCoroutine(Close());
+                    isOn = false;
+                    Debug.Log("Door is Close.");
+                }
+            }
+            else
+            {
+                uiController.HideOpenTheDoor();
+                uiController.ShowYouHaveNotCorrectKey();
+                Debug.Log("Wrong Key!");
+            }
+        }
+        catch (System.Exception)
+        {
+            uiController.ShowYouHaveNotCorrectKey();
+        }
+
     }
     private IEnumerator Open()
     {
@@ -99,6 +133,7 @@ public class Door : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        uiController = FindObjectOfType<UIController>();
     }
 
     // Update is called once per frame

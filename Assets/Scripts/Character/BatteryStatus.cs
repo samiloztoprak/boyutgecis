@@ -37,9 +37,13 @@ public class BatteryStatus : MonoBehaviour
         ChargeSettings();
         GetInput();
 
-        if (!isReducing && flashLightIsOn) // Azalma aktif ve fener açık ise bataryayı azalt.
+        if (!isReducing && flashLightIsOn && batteryStatus > 0) // Azalma aktif ve fener açık ise bataryayı azalt.
         {
             StartCoroutine(ReduceBattery());
+        }
+        else if(batteryStatus < 0)
+        {
+            // Fener pili bitti etraftaki korku unsurları arttırılmalı.
         }
     }
 
