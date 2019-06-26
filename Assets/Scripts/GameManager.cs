@@ -43,6 +43,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Crate[] crates;
 
+    [SerializeField]
+    private UIController uiController;
+
     //--------------------------------------------------------------------------------------
 
     [SerializeField]
@@ -51,6 +54,7 @@ public class GameManager : MonoBehaviour
     private InventorySystem inventory;
 
     private BatteryStatus batteryStatus;
+
 
     private int i, j; // loop variables;
 
