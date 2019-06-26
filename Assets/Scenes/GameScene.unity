@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.1
   m_LinearFogStart: 0
   m_LinearFogEnd: 12
-  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientSkyColor: {r: 0.0627451, g: 0.0627451, b: 0.0627451, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0.7
@@ -2419,7 +2419,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openTheDoor: {fileID: 835508432}
+  closeTheDoor: {fileID: 1984681817}
   youHaveNotCorrectKey: {fileID: 1312814277}
+  pickUp: {fileID: 1752018873}
 --- !u!64 &932155634
 MeshCollider:
   m_ObjectHideFlags: 0
